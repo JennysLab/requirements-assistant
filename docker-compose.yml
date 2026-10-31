@@ -1,0 +1,21 @@
+# Startet den Requirements Assistant als Container:
+#   docker compose up -d --build
+# Danach erreichbar unter http://localhost:8000 (auf dem Server: unter dessen Adresse).
+# Die Datei backend/.env enthaelt die Schluessel und gehoert NICHT ins Git.
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: backend/.env
+        required: false
+    volumes:
+      # Dauerhaft: Wissensbasis (Chroma) und Protokolle ueberleben einen Neustart.
+      - wissensbasis:/data
+      - protokolle:/app/backend/app/generation/logs
+    restart: unless-stopped
+
+volumes:
+  wissensbasis:
+  protokolle:
