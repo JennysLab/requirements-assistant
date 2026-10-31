@@ -1,0 +1,26 @@
+# Geheimnisse – niemals einchecken
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+dist/
+
+# Lokale Daten (Wissensbasis, Protokolle)
+backend/data/
+backend/app/generation/logs/
+
+# Betriebssystem / Editor
+.DS_Store
+.idea/
+.vscode/
