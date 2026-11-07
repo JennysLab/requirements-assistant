@@ -11,7 +11,7 @@ export const TEMPLATES = {
   "jira-standard": {
     id: "jira-standard",
     name: "Jira-Standard",
-    description: "User Story im Jira-Stil: Titel, Beschreibung, Priorität.",
+    description: "User Story im Jira-Stil: Titel und Beschreibung.",
     epic: [
       { key: "title", label: "Titel", type: "text" },
       { key: "description", label: "Beschreibung", type: "textarea" },
@@ -24,14 +24,13 @@ export const TEMPLATES = {
         type: "textarea",
         hint: "Als <Rolle> möchte ich <Ziel>, damit <Nutzen>.",
       },
-      { key: "priority", label: "Priorität", type: "select", options: ["Hoch", "Mittel", "Niedrig"] },
     ],
     criteriaLabel: "Akzeptanzkriterien (Checkliste)",
   },
   satzschablone: {
     id: "satzschablone",
     name: "Satzschablone",
-    description: "Formale Anforderung nach Satzschablone mit MoSCoW-Priorität.",
+    description: "Formale Anforderung nach Satzschablone mit Begründung.",
     epic: [
       { key: "title", label: "Titel", type: "text" },
       { key: "description", label: "Beschreibung", type: "textarea" },
@@ -42,14 +41,13 @@ export const TEMPLATES = {
         key: "description",
         label: "Anforderung",
         type: "textarea",
-                hint: "Satzschablone: [Bedingung,] das System muss/soll/wird [<wem> die Möglichkeit bieten | fähig sein] <Objekt mit Ergänzung> <Prozesswort>. Die Teile in eckigen Klammern nur, wenn nötig. Beispiel: Wenn der Kunde angemeldet ist, muss das System dem Kunden die Möglichkeit bieten, Rechnungen als PDF herunterzuladen.",
+                hint: "Satzschablone nach Pohl und Rupp: [Bedingung,] das System muss/soll/wird, danach entweder nichts, oder [wem] die Möglichkeit bieten, oder fähig sein, dann <Objekt mit Ergänzung> und am Ende das <Prozesswort>. Die Bedingung steht nur, wenn sie nötig ist. Beispiele: Wenn der Kunde angemeldet ist, muss das System dem Kunden die Möglichkeit bieten, Rechnungen als PDF herunterzuladen. Das System muss fähig sein, 100 Anfragen pro Sekunde zu verarbeiten. Das System muss Rechnungen archivieren.",
       },
       { key: "rationale", label: "Begründung", type: "textarea" },
-      { key: "priority", label: "Priorität", type: "select", options: ["Muss", "Soll", "Kann"] },
     ],
     criteriaLabel: "Akzeptanzkriterien",
   },
 };
 
-export const DEFAULT_TEMPLATE_ID = "jira-standard";
+export const DEFAULT_TEMPLATE_ID = "satzschablone";
 export const getTemplate = (id) => TEMPLATES[id] || TEMPLATES[DEFAULT_TEMPLATE_ID];

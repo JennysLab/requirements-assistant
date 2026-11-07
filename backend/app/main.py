@@ -17,7 +17,6 @@ from app.config import get_settings
 from app.generation.router import router as generation_router
 from app.jira.router import router as jira_router
 from app.knowledge.router import router as knowledge_router
-from app.routers import chat, requirements
 
 settings = get_settings()
 
@@ -38,8 +37,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(chat.router)
-app.include_router(requirements.router)
 app.include_router(generation_router)
 app.include_router(knowledge_router)
 app.include_router(jira_router)

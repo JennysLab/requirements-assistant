@@ -26,7 +26,7 @@ router = APIRouter(prefix="/api/generate", tags=["generation"])
 
 
 def get_orchestrator(llm: LLMProvider = Depends(get_llm), kb: KnowledgeBase = Depends(get_kb)) -> Orchestrator:
-    return Orchestrator(llm, kb)
+        return Orchestrator(llm, kb, log_dir=None)
 
 
 def _run(fn, *args):

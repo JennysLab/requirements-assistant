@@ -23,7 +23,7 @@ export default function StepSummary() {
           <h3 className="font-medium"><span className="font-mono text-xs text-muted">{e.id}</span> {e.title}</h3>
           {reqs.filter((r) => r.epicId === e.id).map((r) => (
             <div key={r.id} className="mt-2 pl-3 text-sm">
-              <div><span className="font-mono text-xs text-muted">{r.id}</span> {r.title} <span className="text-muted">({r.priority})</span></div>
+                            <div><span className="font-mono text-xs text-muted">{r.id}</span> {r.title}</div>
               <ul className="ml-4 list-disc text-muted">{crit.filter((c) => c.requirementId === r.id).map((c) => <li key={c.id}>{c.text}</li>)}</ul>
             </div>
           ))}
