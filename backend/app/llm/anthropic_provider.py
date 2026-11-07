@@ -13,7 +13,7 @@ from .base import LLMProvider
 
 
 class AnthropicProvider(LLMProvider):
-    def __init__(self, api_key: str, model: str, max_tokens: int = 1536):
+    def __init__(self, api_key: str, model: str, max_tokens: int = 4096):
         if not api_key:
             raise ValueError(
                 "ANTHROPIC_API_KEY fehlt. Bitte .env-Datei anlegen (siehe .env.example) "

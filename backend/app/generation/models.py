@@ -39,22 +39,21 @@ class _Base(BaseModel):
 
 
 class EpicsRequest(_Base):
-    count: int = Field(default=3, ge=1, le=8)
+    count: int = Field(default=8, ge=1, le=8)
     # Gesetzt bei "Neu generieren": der bisherige Entwurf wird ueberarbeitet.
     revise: Optional[Dict[str, str]] = None
 
 
 class RequirementsRequest(_Base):
     epic: Dict[str, str]
-    count: int = Field(default=2, ge=1, le=6)
+    count: int = Field(default=6, ge=1, le=6)
     revise: Optional[Dict[str, str]] = None
 
 
 class CriteriaRequest(_Base):
     epic: Dict[str, str]
     requirement: Dict[str, str]
-    count: int = Field(default=4, ge=1, le=8)
-
+    count: int = Field(default=5, ge=1, le=5)
 
 class EpicsResponse(BaseModel):
     epics: List[Dict[str, str]]
