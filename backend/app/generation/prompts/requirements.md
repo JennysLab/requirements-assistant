@@ -1,5 +1,5 @@
 # Aufgabe
-Leite für das folgende Epic {{count}} konkrete Anforderung(en) ab.
+Leite für das folgende Epic so viele konkrete Anforderungen ab, wie nötig sind, um das Epic vollständig abzudecken, höchstens {{count}}. Erzeuge nicht mehr als nötig.
 
 # Kontext
 Gesamtvorhaben:

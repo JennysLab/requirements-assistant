@@ -1,5 +1,5 @@
 # Aufgabe
-Leite für die folgende Anforderung {{count}} Akzeptanzkriterien ab.
+Leite für die folgende Anforderung so viele Akzeptanzkriterien ab, wie nötig sind, um sie prüfbar abzudecken, höchstens {{count}}.
 
 # Kontext
 Gesamtvorhaben:

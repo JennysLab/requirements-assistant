@@ -1,5 +1,5 @@
 # Aufgabe
-Leite aus der Vorhabensbeschreibung {{count}} Epic(s) ab.
+Leite aus der Vorhabensbeschreibung so viele Epics ab, wie fachlich nötig sind, um das Vorhaben vollständig abzudecken, höchstens {{count}}. Erzeuge nicht mehr Epics als nötig und teile nichts künstlich auf.
 
 # Kontext
 Vorhabensbeschreibung:
