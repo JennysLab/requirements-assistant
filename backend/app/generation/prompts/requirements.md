@@ -17,7 +17,7 @@ Epic:
 
 # Regeln
 - Jede Anforderung beschreibt genau eine abgrenzbare Leistung des Systems.
-- Halte dich bei der Formulierung an die Hinweise der Felder, falls dort ein Satzmuster genannt ist.
+- Formuliere das Feld, dessen Hinweis ein Satzmuster nennt, immer genau nach diesem Satzmuster.
 - Die Anforderungen gehören fachlich zum genannten Epic und widersprechen sich nicht.
 - Keine technische Lösung vorgeben, wenn die Beschreibung das nicht verlangt.
 

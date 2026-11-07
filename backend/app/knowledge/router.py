@@ -64,6 +64,18 @@ async def upload_document(file: UploadFile = File(...), kb: KnowledgeBase = Depe
         )
 
 
+@router.post("/extract")
+async def extract_text(file: UploadFile = File(...)):
+    """Liest nur den Text einer Datei (fuer Anhaenge im Wizard). Speichert nichts."""
+    data = await file.read()
+    if len(data) > MAX_BYTES:
+        raise HTTPException(status_code=413, detail="Datei ist groesser als 10 MB.")
+    try:
+        text = read_text(file.filename or "", data)
+    except ReadError as e:
+        raise HTTPException(status_code=422, detail=str(e))
+    return {"name": file.filename, "text": text}
+
 @router.delete("/documents/{doc_id}")
 def delete_document(doc_id: str, kb: KnowledgeBase = Depends(get_kb)):
     if not kb.delete_document(doc_id):

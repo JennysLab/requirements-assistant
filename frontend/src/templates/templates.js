@@ -42,7 +42,7 @@ export const TEMPLATES = {
         key: "description",
         label: "Anforderung",
         type: "textarea",
-        hint: "Das System muss <Funktion> <Bedingung>.",
+                hint: "Satzschablone: [Bedingung,] das System muss/soll/wird [<wem> die Möglichkeit bieten | fähig sein] <Objekt mit Ergänzung> <Prozesswort>. Die Teile in eckigen Klammern nur, wenn nötig. Beispiel: Wenn der Kunde angemeldet ist, muss das System dem Kunden die Möglichkeit bieten, Rechnungen als PDF herunterzuladen.",
       },
       { key: "rationale", label: "Begründung", type: "textarea" },
       { key: "priority", label: "Priorität", type: "select", options: ["Muss", "Soll", "Kann"] },
